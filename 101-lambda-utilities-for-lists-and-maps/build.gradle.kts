@@ -21,7 +21,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.1")
 }
 
-val mainClass: String by project
+val mainClass: it.unibo.oop.lab.lambda.LambdaUtilities
 
 application {
     // The following allows to run with: ./gradlew -PmainClass=it.unibo.oop.MyMainClass run
