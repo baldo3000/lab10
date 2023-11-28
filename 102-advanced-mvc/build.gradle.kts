@@ -11,3 +11,7 @@ repositories {
 application {
     mainClass.set("it.unibo.mvc.DrawNumberApp")
 }
+
+dependencies {
+    compileOnly("com.github.spotbugs:spotbugs-annotations:4.8.1")
+}

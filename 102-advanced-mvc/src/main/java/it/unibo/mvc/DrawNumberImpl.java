@@ -15,6 +15,12 @@ public final class DrawNumberImpl implements DrawNumber {
     private final Random random = new Random();
 
     /**
+     * @param min      the smallest number allowed
+     * 
+     * @param max      the biggest number allowed
+     * 
+     * @param attempts the maximum number of attemps
+     * 
      * @throws IllegalStateException if the configuration is not consistent
      */
     public DrawNumberImpl(final int min, final int max, final int attempts) {
@@ -22,6 +28,13 @@ public final class DrawNumberImpl implements DrawNumber {
         this.max = max;
         this.attempts = attempts;
         this.reset();
+    }
+
+    /**
+     * @param config the Configuration object
+     */
+    public DrawNumberImpl(final Configuration config) {
+        this(config.getMin(), config.getMax(), config.getAttempts());
     }
 
     @Override
